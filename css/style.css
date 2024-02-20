@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #DFCCFB;
+    --color-secondary: #F1EAFF;
+    --color-heading: #535C91;
+    --color-text: #474F7A;
+
+    --fs-10: 0.5rem
+    --fs-12: 0.75rem;
+    --fs-16: 1rem;
+    --fs-24: 1.5rem;
+    --fs-36: 2.25rem;
+
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fs-12);
+
+    color: var(--color-text);
+    background-color: var(--color-primary);  
+    height: 100vh;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate; 
+}
+
+
+.form {
+    padding: 3rem 0;
+}
+
+.form-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.field-wrapper {
+    width: 90%;
+}
+
+input {
+    width: 100%;
+    padding: 0.25rem 0.35rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.25rem;
+
+    font-weight: var(--fw-medium);
+}
+
+.student-section-heading {
+    font-size: var(--fs-24);
+    color: var(--color-heading);
+    margin-left: 0.75rem;
+    text-decoration: underline;
+}
+
+/* education section  */
+
+.education-section-heading {
+    font-size: var(--fs-24);
+    color: var(--color-heading);
+    margin-left: 0.75rem;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+}
+
+.table {
+    background-color: var(--color-primary) !important;
+}
+
+th, td {
+    background-color: transparent !important;
+}
+
+th {
+    color: var(--color-text) !important;
+}
+
+.add-btn {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+@media (min-width: 576px){
+
+    body {
+        font-size: var(--fs-16);
+    }
+    .field-wrapper {
+        width: 100%;
+    }
+
+    .student-section-heading,
+    .education-section-heading {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: var(--fs-36);
+    }
+
+    .education-section-heading {
+        margin-block: 1.5rem;
+        font-size: var(--fs-36);
+    }
+
+}
+
