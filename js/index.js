@@ -37,8 +37,8 @@ let email = document.getElementById('Email')
 let address = document.getElementById('address')
 let graduationYear = document.getElementById('graduation-year')
 
-let educationInfo = []
 function getEducationData(){
+    let educationInfo = []
     let tableBody= document.querySelector('#tbody')
     let allEducation = tableBody.querySelectorAll('tr')
 
