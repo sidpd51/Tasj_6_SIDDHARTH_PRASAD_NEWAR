@@ -9,89 +9,90 @@
 </head>
 <body>
     <form action="" class="form">
-        <div class="form-container">
-            <h1 class="student-section-heading">Student form</h1>
-            <div class="container-fluid text-center px-0 mb-5">
-                <div class="row mx-0 gy-2 mb-2">
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="fname">First Name</label><br>
-                        <input type="text" id="fname" name="fname" value="Siddharth"><br>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="lname">Last Name</label><br>
-                        <input type="text" id="lname" name="lname" value="Prasad"><br>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="dob">Date Of Birth</label><br>
-                        <input type="date" id="dob" name="dob" value="2001-03-25"><br>
-                    </div>
-                  </div>
+      <div class="form-container">
+        <h1 class="student-section-heading">Student form</h1>
+        <div class="container-fluid text-center px-0 mb-5">
+            <div class="row mx-0 gy-2 mb-2">
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="fname">First Name</label><br>
+                    <input type="text" id="fname" name="fname" value="Siddharth"><br>
                 </div>
-                <hr>
-                <div class="row mx-0 gy-2">
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="Email">Email</label><br>
-                        <input type="email" id="Email" name="Email" value="sidpd51@gmail.com"><br>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="address">Address</label><br>
-                        <input type="text" id="address" name="address" value="Bopal, Ahmedabad"><br>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="field-wrapper">
-                        <label for="graduation-year">Graduation Year</label><br>
-                        <input type="month" id="graduation-year" name="graduation-year" value="2024-06"><br>
-                    </div>
-                  </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" id="lname" name="lname" value="Prasad"><br>
                 </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="dob">Date Of Birth</label><br>
+                    <input type="date" id="dob" name="dob" value="2001-03-25"><br>
+                </div>
+              </div>
             </div>
-            <h2 class="education-section-heading mt-5">Education</h2>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col"><label for="degree-board">Degree/Board</label></th>
-                        <th scope="col"><label for="school-college">School/College</label></th>
-                        <th scope="col"><label for="start-date">Start Date</label></th>
-                        <th scope="col"><label for="passout-year">Passout Year</label></th>
-                        <th scope="col"><label for="percentage">Percentage</label></th>
-                        <th scope="col"><label for="backlog">Backlog</label></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input type="text" id="degree-board" name="degree-board" value="C.B.S.E"></td>
-                        <td><input type="text" id="school-college" name="school-college" value="D.A.V Public School"></td>
-                        <td><input type="date" id="start-date" name="start-date" value="2014-09-22"></td>
-                        <td><input type="month" id="passout-year" name="passout-year" value="2017-04"></td>
-                        <td><input type="number" id="percentage" name="percentage" value="89"></td>
-                        <td><input type="number" id="backlog" name="backlog" value="0"></td>
-                      </tr>
-                      <tr>
-                        <td><input type="text" id="degree-board" name="degree-board" value="C.B.S.E"></td>
-                        <td><input type="text" id="school-college" name="school-college" value="O.D.M Public School"></td>
-                        <td><input type="date" id="start-date" name="start-date" value="2017-06-08"></td>
-                        <td><input type="month" id="passout-year" name="passout-year" value="2019-05"></td>
-                        <td><input type="number" id="percentage" name="percentage" value="76.2"></td>
-                        <td><input type="number" id="backlog" name="backlog" value="0"></td>
-                        <td><button class="add-btn" onclick=""><i class="fa-regular fa-square-plus fa-xl" style="color: #535c91;"></i></button></td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <hr>
+            <div class="row mx-0 gy-2">
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="Email">Email</label><br>
+                    <input type="email" id="Email" name="Email" value="sidpd51@gmail.com"><br>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address" value="Bopal, Ahmedabad"><br>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="field-wrapper">
+                    <label for="graduation-year">Graduation Year</label><br>
+                    <input type="month" id="graduation-year" name="graduation-year" value="2024-06"><br>
+                </div>
+              </div>
             </div>
         </div>
+        <h2 class="education-section-heading mt-5">Education</h2>
+        <div class="table-responsive">
+          <table class="table overflow-y-auto " style="max-height: 200px; ">
+            <thead>
+              <tr>
+                <th scope="col"><label for="degree-board">Degree/Board</label></th>
+                <th scope="col"><label for="school-college">School/College</label></th>
+                <th scope="col"><label for="start-date">Start Date</label></th>
+                <th scope="col"><label for="passout-year">Passout Year</label></th>
+                <th scope="col"><label for="percentage">Percentage</label></th>
+                <th scope="col"><label for="backlog">Backlog</label></th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr id="education-1">
+                <td><input type="text" id="degree-board-1" name="degree-board" value="C.B.S.E"></td>
+                <td><input type="text" id="school-college-1" name="school-college" value="D.A.V Public School"></td>
+                <td><input type="date" id="start-date-1" name="start-date" value="2014-09-22"></td>
+                <td><input type="month" id="passout-year-1" name="passout-year" value="2017-04"></td>
+                <td><input type="number" id="percentage-1" name="percentage" value="89"></td>
+                <td><input type="number" id="backlog-1" name="backlog" value="0"></td>
+              </tr>
+              <tr id="education-2">
+                <td><input type="text" id="degree-board-2" name="degree-board" value="C.B.S.E"></td>
+                <td><input type="text" id="school-college-2" name="school-college" value="D.A.V Public School"></td>
+                <td><input type="date" id="start-date-2" name="start-date" value="2014-09-22"></td>
+                <td><input type="month" id="passout-year-2" name="passout-year" value="2017-04"></td>
+                <td><input type="number" id="percentage-2" name="percentage" value="89"></td>
+                <td><input type="number" id="backlog-2" name="backlog" value="0"></td>
+                <td><button type="button" onclick="addEducation()" class="btn-common"><i class="fa-regular fa-square-plus fa-xl" style="color: #535c91;"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+        <button class="btn btn-outline-primary submit-btn rounded-2 px-2 py-1 mx-auto mt-5" type="button" onclick="getEducationData()">Submit</button> 
+      </div>
     </form>
-    <script src="./"></script>
     <script src="https://kit.fontawesome.com/2604aff8b6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/index.js" defer></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     --color-heading: #535C91;
     --color-text: #474F7A;
 
-    --fs-10: 0.5rem
+    --fs-10: 0.5rem;
     --fs-12: 0.75rem;
     --fs-16: 1rem;
     --fs-24: 1.5rem;
@@ -124,7 +124,9 @@ label {
 
 .table {
     background-color: var(--color-primary) !important;
-}
+    max-height: 200px !important;
+    overflow-y: auto;
+} 
 
 th, td {
     background-color: transparent !important;
@@ -134,13 +136,29 @@ th {
     color: var(--color-text) !important;
 }
 
-.add-btn {
+.btn-common {
     background-color: transparent;
     color: inherit;
     border: none;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    outline: inherit;   
+}
+
+.submit-btn {
+    display: block;
+}
+
+.btn-outline-primary {
+    background-color: var(--color-secondary) ;
+    color: var(--color-text) ;
+    border: 2px solid var(--color-text);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-text) !important;
+    color: var(--color-secondary) !important;
+    border: 2px solid var(--color-text);
 }
 
 @media (min-width: 576px){
