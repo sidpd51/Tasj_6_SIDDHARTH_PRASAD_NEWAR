@@ -60,7 +60,7 @@ function getEducationData(){
 
     for(let i=1; i<=sectionCount; i++){
         let currentEducation = {
-            degree_board_: document.getElementById(`degree-board-${i}`),
+            degree_board: document.querySelector(`#degree-board-${i}`).value,
             school_college: document.querySelector(`#school-college-${i}`).value,
             start_date: document.querySelector(`#start-date-${i}`).value,
             passout_year: document.querySelector(`#passout-year-${i}`).value,
