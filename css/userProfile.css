@@ -77,7 +77,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .form-container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -156,6 +156,15 @@ th {
     border: 2px solid var(--color-text);
 }
 
+.profile-info {
+    width: 30%;
+}
+
+.picture {
+}
+
+
+
 @media (min-width: 576px){
 
     body {
@@ -176,6 +185,7 @@ th {
         margin-block: 1.5rem;
         font-size: var(--fs-36);
     }
+
 
 }
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <form action="" class="form">
+    <form action="./html/userProfile.html" class="form" id="form">
       <div class="form-container">
         <h1 class="student-section-heading">Student form</h1>
         <div class="container-fluid text-center px-0 mb-5">
@@ -88,7 +88,10 @@
             </tbody>
           </table>
         </div> 
-        <button class="btn btn-outline-primary submit-btn rounded-2 px-2 py-1 mx-auto mt-5" type="button" onclick="getEducationData()">Submit</button> 
+        <div class="d-flex justify-content-between my-5">
+          <button class="btn btn-outline-primary clear-btn rounded-2 px-2 py-1 ms-auto" type="button" onclick="clearForm()">Clear</button>    
+          <button class="btn btn-outline-primary submit-btn rounded-2 px-2 py-1 ms-3" type="submit" onclick="getEducationData()">Submit</button> 
+        </div>
       </div>
     </form>
     <script src="https://kit.fontawesome.com/2604aff8b6.js" crossorigin="anonymous"></script>

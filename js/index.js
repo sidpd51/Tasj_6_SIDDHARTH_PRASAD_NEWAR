@@ -11,7 +11,7 @@ function addEducation(){
     <td><input type="month" id="passout-year"  name="passout-year" value="2019-05"></td>
     <td><input type="number" id="percentage" name="percentage" value="76.2"></td>
     <td><input type="number" id="backlog" name="backlog" value="0"></td>
-    <td><button type="button" class="btn-common" onclick="removeEducation(this)"><i class="fa-regular fa-square-minus fa-xl" style="color: #535c91;"></i></button><td>
+    <td><button type="button" class="btn-common" onclick="removeEducation(this)"><i class="fa-regular fa-square-minus fa-xl" style="color: #535c91;"></i></button></td>
     `   
     let newRow = document.createElement('tr')
     newRow.id = "education-"+value
@@ -65,12 +65,15 @@ function getEducationData(){
         educationInfo: educationInfo
     }
 
-    const jsonData = JSON.stringify(info)
-    console.log(jsonData)
-    
+    const jsonData = JSON.stringify(info);
+    console.log(jsonData);
+
+    localStorage.setItem('user', jsonData);
 }
 
 
-
+function clearForm(){
+    document.getElementById('form').reset();
+}
 
 
