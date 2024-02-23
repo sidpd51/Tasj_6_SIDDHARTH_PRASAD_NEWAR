@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <form action="./html/userProfile.html" class="form" id="form">
+    <form action="./html/userProfile.html" onsubmit="return validate()" class="form" id="form">
       <div class="form-container">
         <h1 class="student-section-heading">Student form</h1>
         <div class="container-fluid text-center px-0 mb-5">
@@ -16,19 +16,21 @@
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="fname">First Name</label><br>
-                    <input type="text" id="fname" name="fname" value="Siddharth"><br>
+                    <input type="text" id="fname" name="fname" value="" class="fnameInput"><br>
+                    <span id="fnameError" class="error"></span>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="lname">Last Name</label><br>
-                    <input type="text" id="lname" name="lname" value="Prasad"><br>
+                    <input type="text" id="lname" name="lname" value=""><br>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="dob">Date Of Birth</label><br>
-                    <input type="date" id="dob" name="dob" value="2001-03-25"><br>
+                    <input type="date" id="dob" name="dob" value="" class="dobInput"><br>
+                    <span id="dobError" class="error"></span>
                 </div>
               </div>
             </div>
@@ -37,19 +39,22 @@
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="Email">Email</label><br>
-                    <input type="email" id="Email" name="Email" value="sidpd51@gmail.com"><br>
+                    <input type="email" id="Email" name="Email" value="" class="emailInput"><br>
+                    <span id="emailError" class="error"></span>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="address">Address</label><br>
-                    <input type="text" id="address" name="address" value="Bopal, Ahmedabad"><br>
+                    <textarea  id="address" name="address" value="" class="addressInput" cols="40" rows="1" style="width: 100%;"></textarea><br>
+                    <span id="addressError" class="error"></span>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="field-wrapper">
                     <label for="graduation-year">Graduation Year</label><br>
-                    <input type="month" id="graduation-year" name="graduation-year" value="2024-06"><br>
+                    <input type="month" id="graduation-year" name="graduation-year" value="" class="graduationInput"><br>
+                    <span id="graduationError" class="error"></span>
                 </div>
               </div>
             </div>

@@ -30,14 +30,17 @@ function removeEducation(button){
 
 // json 
 
-let firstName = document.getElementById('fname')
-let lastName = document.getElementById('lname')
-let dob = document.getElementById('dob')
-let email = document.getElementById('Email')
-let address = document.getElementById('address')
-let graduationYear = document.getElementById('graduation-year')
+
 
 function getEducationData(){
+
+    let firstName = document.getElementById('fname').value
+    let lastName = document.getElementById('lname').value
+    let dob = document.getElementById('dob').value
+    let email = document.getElementById('Email').value
+    let address = document.getElementById('address').value
+    let graduationYear = document.getElementById('graduation-year').value
+    
     let educationInfo = []
     let tableBody= document.querySelector('#tbody')
     let allEducation = tableBody.querySelectorAll('tr')
@@ -56,12 +59,12 @@ function getEducationData(){
     })
 
     let info = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        dob: dob.value,
-        email: email.value,
-        address: address.value,
-        graduationYear: graduationYear.value,
+        firstName: firstName,
+        lastName: lastName,
+        dob: dob,
+        email: email,
+        address: address,
+        graduationYear: graduationYear,
         educationInfo: educationInfo
     }
 
@@ -74,6 +77,57 @@ function getEducationData(){
 
 function clearForm(){
     document.getElementById('form').reset();
+}
+
+
+function validate(){
+    let firstName = document.getElementById('fname').value
+    let dob = document.getElementById('dob').value
+    let email = document.getElementById('Email').value
+    let address = document.getElementById('address').value
+    let graduationYear = document.getElementById('graduation-year').value
+
+    let fnameError = document.getElementById('fnameError')
+    let dobError = document.getElementById('dobError')
+    let emailError = document.getElementById('emailError')
+    let addressError = document.getElementById('addressError')
+    let graduationError = document.getElementById('graduationError')
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let givenDob = new Date(dob);
+    let current = new Date()
+
+    if(firstName.trim()==''){
+        fnameError.innerHTML="First name is required!"
+        return false;
+    }
+
+    let yearDiff = current.getFullYear()- givenDob.getFullYear() 
+
+    if(dob=="" || yearDiff<18){
+        dobError.innerHTML="Minimum age requirement is 18!";
+        return false;
+    }
+
+    if(!emailRegex.test(email)){
+        emailError.innerHTML="Invalid email address!";
+        return false;
+    }
+
+    if(address.trim()==''){
+        addressError.innerHTML="Address is required!"
+        return false;
+    }
+    
+
+    let gradYear = new Date(graduationYear).getFullYear()
+
+    if(graduationYear=="" || gradYear>=current.getFullYear()){
+        graduationError.innerHTML="Invalid graduation year";
+        return false;
+    }
+
+    alert('form submitted successfully!')
+    return true
 }
 
 
